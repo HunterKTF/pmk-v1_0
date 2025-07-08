@@ -1,5 +1,7 @@
 "use client"
 
+import { signout } from "@/actions/login"
+
 import {
   BadgeCheck,
   Bell,
@@ -102,7 +104,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => signout()}>
               <LogOut />
               Log out
             </DropdownMenuItem>
