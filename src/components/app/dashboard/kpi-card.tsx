@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode } from "react"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {
   DropdownMenu,
@@ -9,11 +9,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {
-  ChartNoAxesColumnIncreasing,
-  ChartNoAxesColumnDecreasing,
-  ChevronRightIcon,
-} from "lucide-react"
+// import {
+//   ChartNoAxesColumnIncreasing,
+//   ChartNoAxesColumnDecreasing,
+//   ChevronRightIcon,
+// } from "lucide-react"
 
 type MetricOption = {
   title: string
@@ -72,13 +72,15 @@ export function KPICard({
         </Badge>
       </div>
 
-      <Button variant="outline" className="w-full rounded-md flex justify-between items-center py-2 px-4 border">
+      <div className="w-full h-4 bg-black" />
+
+      {/* <Button variant="outline" className="w-full rounded-md flex justify-between items-center py-2 px-4 border">
         <p className="text-xs flex gap-2 items-end">
           {isPositive ? <ChartNoAxesColumnIncreasing className="size-4" /> : <ChartNoAxesColumnDecreasing className="size-4" />}
           {past} {isPositive ? "more" : "less"} than last month
         </p>
         <ChevronRightIcon size={16} />
-      </Button>
+      </Button> */}
     </div>
   )
 }
