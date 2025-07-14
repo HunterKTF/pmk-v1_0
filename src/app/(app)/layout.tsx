@@ -1,5 +1,7 @@
 // app/dashboard/layout.tsx or similar path
 
+import { createClient } from "@/utils/supabase/server"
+
 import { AppSidebar } from "@/components/app/sidebar/app-sidebar"
 import { NavBar } from "@/components/app/sidebar/nav-bar"
 import {
@@ -11,7 +13,15 @@ type MainLayoutProps = {
   children: React.ReactNode
 }
 
-export default function MainLayout({ children }: MainLayoutProps) {
+export default async function MainLayout({ children }: MainLayoutProps) {
+  const supabase = await createClient();
+  const { data, error } = await supabase.auth.getUser();
+
+  if (error || !data?.user) {
+    console.log("No user was found")
+  }
+
+  console.log(data);
   return (
     <SidebarProvider>
       <AppSidebar />

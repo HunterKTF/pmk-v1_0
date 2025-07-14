@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode } from "react"
-// import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {
   DropdownMenu,
@@ -9,15 +9,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-// import {
-//   ChartNoAxesColumnIncreasing,
-//   ChartNoAxesColumnDecreasing,
-//   ChevronRightIcon,
-// } from "lucide-react"
+
+import { formatCurrency } from "@/components/utilities/helper"
+import {
+  ChartNoAxesColumnIncreasing,
+  ChartNoAxesColumnDecreasing,
+  ChevronRightIcon,
+} from "lucide-react"
 
 type MetricOption = {
   title: string
-  value: number | string
+  value: number
   badge: string
   icon: ReactNode
   past: string
@@ -61,10 +63,10 @@ export function KPICard({
         </div>
       </div>
 
-      <div className="flex justify-start items-end gap-4">
+      <div className="flex justify-between items-end gap-4">
         <h2 className="text-3xl font-light">
           {!ratio && <span className="text-lg">$</span>}
-          {value}
+          {formatCurrency(value)}
           {!ratio && <span className="text-xs"> MXN</span>}
         </h2>
         <Badge className={isPositive ? "text-green-500 bg-green-100" : "text-red-500 bg-red-100"}>
@@ -72,15 +74,15 @@ export function KPICard({
         </Badge>
       </div>
 
-      <div className="w-full h-4 bg-black" />
+      {/* <div className="w-full h-4" /> */}
 
-      {/* <Button variant="outline" className="w-full rounded-md flex justify-between items-center py-2 px-4 border">
+      <Button variant="outline" className="w-full rounded-md flex justify-between items-center py-2 px-4 border">
         <p className="text-xs flex gap-2 items-end">
           {isPositive ? <ChartNoAxesColumnIncreasing className="size-4" /> : <ChartNoAxesColumnDecreasing className="size-4" />}
           {past} {isPositive ? "more" : "less"} than last month
         </p>
         <ChevronRightIcon size={16} />
-      </Button> */}
+      </Button>
     </div>
   )
 }

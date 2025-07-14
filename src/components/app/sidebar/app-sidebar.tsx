@@ -114,31 +114,31 @@ const data: {
     },
     {
       title: "Expense Breakdown",
-      url: "/expenses",
+      url: "/expense-breakdown",
       icon: Blocks,
     },
     {
       title: "Economic Benchmark",
-      url: "/econ_benchmarks",
+      url: "/economic-benchmark",
       icon: Landmark,
     },
     {
       title: "Pretax ROCE",
-      url: "/pretax_roce",
+      url: "/pretax-roce",
       icon: Network,
     },
   ],
   navSecondary: [
     {
       title: "Support",
-      url: "#",
+      url: "/support",
       icon: LifeBuoy,
     },
   ],
   data: [
     {
       name: "Upload Data",
-      url: "#",
+      url: "/upload-data",
       icon: TableProperties,
     },
   ],

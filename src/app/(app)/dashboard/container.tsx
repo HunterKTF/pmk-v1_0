@@ -15,7 +15,7 @@ import { ExpensesCard } from "@/components/app/dashboard/expenses-card"
 // Define the shape of a KPI metric object
 type MetricData = {
   title: string
-  value: number | string
+  value: number
   badge: string
   icon: ReactNode
   past: string
