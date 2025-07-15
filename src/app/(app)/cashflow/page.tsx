@@ -3,7 +3,7 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
 
-import UploadDataContainer from './container'
+import CashflowContainer from './container'
 
 export default async function Page(): Promise<React.JSX.Element> {
   const supabase = await createClient()
@@ -13,5 +13,5 @@ export default async function Page(): Promise<React.JSX.Element> {
     redirect('/')
   }
 
-  return <UploadDataContainer />
+  return <CashflowContainer />
 }

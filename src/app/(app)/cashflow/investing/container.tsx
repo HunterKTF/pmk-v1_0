@@ -2,9 +2,26 @@
 
 export default function InvestingContainer(): React.JSX.Element {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
-      <h1 className="text-2xl font-bold mb-4">Investing Dashboard</h1>
-      <p className="text-gray-600">This is a placeholder for the investing dashboard.</p>
+    <div className="w-full h-full flex flex-col gap-2 p-4">
+      <div className="w-full h-[70vh] flex gap-2">
+        <div className="h-full w-full flex flex-col gap-2">
+          {/* KPI Cards */}
+          <div className="w-full h-[50%] flex gap-2">
+            <div className="w-full h-full bg-teal-600 rounded-md"></div>
+            <div className="w-full h-full bg-teal-600 rounded-md"></div>
+            
+          </div>
+
+          {/* Main Chart */}
+          <div className="w-full h-full bg-teal-600 rounded-md"></div>
+        </div>
+
+        {/* Side Chart */}
+        <div className="h-full w-2xl bg-teal-600 rounded-md"></div>
+      </div>
+
+      {/* Table Area */}
+      <div className="w-full h-[55vh] bg-teal-600 rounded-md"></div>
     </div>
   )
 }

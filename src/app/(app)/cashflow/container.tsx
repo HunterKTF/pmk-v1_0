@@ -2,9 +2,18 @@
 
 export default function CashflowContainer(): React.JSX.Element {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
-      <h1 className="text-2xl font-bold mb-4">Cashflow Dashboard</h1>
-      <p className="text-gray-600">This is a placeholder for the cashflow dashboard.</p>
+    <div className="w-full h-full flex gap-2 p-4">
+      <div className="h-full w-full flex flex-col gap-2">
+        <div className="w-full h-full bg-teal-600 rounded-md"></div>
+        <div className="w-full h-full flex gap-2">
+          <div className="w-full h-full bg-teal-600 rounded-md"></div>
+          <div className="w-full h-full bg-teal-600 rounded-md"></div>
+        </div>
+      </div>
+      <div className="h-full w-2xl flex flex-col gap-2">
+        <div className="w-full h-full bg-teal-600 rounded-md"></div>
+        <div className="w-full h-[60%] bg-teal-600 rounded-md"></div>
+      </div>
     </div>
   )
 }
