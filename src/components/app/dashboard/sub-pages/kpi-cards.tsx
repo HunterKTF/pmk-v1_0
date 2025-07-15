@@ -48,6 +48,12 @@ export function KPICards({
           {badge}
         </Badge>
       </div>
+
+      <div className="w-full">
+        <p className="text-sm font-medium">
+          {past} more than previous year
+        </p>
+      </div>
     </div>
   )
 }
