@@ -45,7 +45,7 @@ export function KPICard({
 
   return (
     <div className="w-full h-full bg-white rounded-xl flex flex-col justify-between border py-2 px-4 shadow-sm">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center gap-2">
         <h3 className="text-md font-medium">{title}</h3>
         <div className="w-10 h-10">
           <DropdownMenu>
