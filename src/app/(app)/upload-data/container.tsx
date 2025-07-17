@@ -19,6 +19,8 @@ import {
   MoreVertical
 } from "lucide-react"
 
+import { DataTableDemo } from "@/components/app/upload-data/data-table"
+
 export default function UploadDataContainer(): React.JSX.Element {
   return (
     <div className="w-full h-full flex flex-col gap-2 p-4">
@@ -140,7 +142,9 @@ export default function UploadDataContainer(): React.JSX.Element {
 
 
       <h6 className="text-sm font-medium mt-4">All Files</h6>
-      <div className="w-full h-full bg-teal-600 rounded-md"></div>
+      <div className="w-full h-full rounded-md">
+        <DataTableDemo />
+      </div>
     </div>
   )
 }
