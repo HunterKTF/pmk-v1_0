@@ -1,6 +1,7 @@
 // app/dashboard/layout.tsx or similar path
 
 import { createClient } from "@/utils/supabase/server"
+import { redirect } from 'next/navigation'
 
 import { AppSidebar } from "@/components/app/sidebar/app-sidebar"
 import { NavBar } from "@/components/app/sidebar/nav-bar"
@@ -19,6 +20,7 @@ export default async function MainLayout({ children }: MainLayoutProps) {
 
   if (error || !data?.user) {
     console.log("No user was found")
+    redirect('/')
   }
 
   console.log(data);
